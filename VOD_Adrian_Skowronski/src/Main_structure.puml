@@ -1,0 +1,423 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1016194375 { 
+   	label=Login_Admin
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Login_Admin1016194375[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Login_Admin</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ logAdmin()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1185989415 { 
+   	label=Registration
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Registration1185989415[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Registration</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   scanner: Scanner [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ register()</TD></TR>
+<TR><TD ALIGN="LEFT" >- storeUser(username: String, password: String, email: String, id: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ validateEmail(email: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ validatePassword(password: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_126857307 { 
+   	label=Feedback
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Feedback126857307[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Feedback</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ leaveFeedback(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1336648605 { 
+   	label=PolishWorldCup
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   PolishWorldCup1336648605[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PolishWorldCup</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ videoList(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1366973515 { 
+   	label=FourHillsTournament
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   FourHillsTournament1366973515[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FourHillsTournament</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ videoList(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1709235160 { 
+   	label=OlympicGames
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   OlympicGames1709235160[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OlympicGames</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ videoList(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_202048534 { 
+   	label=UserMenu
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   UserMenu202048534[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)UserMenu</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ showMenu(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2095026020 { 
+   	label=WorldChampionships
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   WorldChampionships2095026020[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)WorldChampionships</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ videoList(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Main2390489[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ menu()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2645995 { 
+   	label=User
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   User2645995[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)User</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   currentBalance2: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addFunds(username: String, amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ checkUserId(username: String, inputId: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getCurrentBalance2(username: String): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ info(username: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateBalance(username: String, newBalance: double)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_609214285 { 
+   	label=AbroadWorldCup
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   AbroadWorldCup609214285[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)AbroadWorldCup</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ videoList(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_63116079 { 
+   	label=Admin
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Admin63116079[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Admin</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ login(username: String, password: String): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ panel()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_73596745 { 
+   	label=Login
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Login73596745[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Login</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   scanner: Scanner [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ login()</TD></TR>
+<TR><TD ALIGN="LEFT" >- validateUser(username: String, password: String): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_82650203 { 
+   	label=Video
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Video82650203[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Video</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   category: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   price: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   title: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   winner: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(video: Video)</TD></TR>
+<TR><TD ALIGN="LEFT" ># displayVideosByCategory(lines: List&lt;String&gt;, category: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># readDataFromDatabase(filePath: String): List&lt;String&gt;</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_877971942 { 
+   	label=Payment
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Payment877971942[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Payment</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ buying(username: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+AbroadWorldCup609214285 -> Payment877971942[label="videoList() -> buying()"];
+Admin63116079 -> Main2390489[label="panel() -> menu()"];
+Feedback126857307 -> UserMenu202048534[label="leaveFeedback() -> showMenu()"];
+FourHillsTournament1366973515 -> Payment877971942[label="videoList() -> buying()"];
+Login73596745 -> UserMenu202048534[label="login() -> showMenu()"];
+Login_Admin1016194375 -> Main2390489[label="logAdmin() -> menu()"];
+Main2390489 -> Login73596745[label="menu() -> login()"];
+Main2390489 -> Login_Admin1016194375[label="menu() -> logAdmin()"];
+Main2390489 -> Registration1185989415[label="menu() -> register()"];
+OlympicGames1709235160 -> Payment877971942[label="videoList() -> buying()"];
+Payment877971942 -> User2645995[label="buying() -> updateBalance()"];
+PolishWorldCup1336648605 -> Payment877971942[label="videoList() -> buying()"];
+UserMenu202048534 -> AbroadWorldCup609214285[label="showMenu() -> videoList()"];
+UserMenu202048534 -> Feedback126857307[label="showMenu() -> leaveFeedback()"];
+UserMenu202048534 -> FourHillsTournament1366973515[label="showMenu() -> videoList()"];
+UserMenu202048534 -> Main2390489[label="showMenu() -> menu()"];
+UserMenu202048534 -> OlympicGames1709235160[label="showMenu() -> videoList()"];
+UserMenu202048534 -> PolishWorldCup1336648605[label="showMenu() -> videoList()"];
+UserMenu202048534 -> WorldChampionships2095026020[label="showMenu() -> videoList()"];
+Video82650203 -> AbroadWorldCup609214285[arrowhead=none, arrowtail=empty, dir=both];
+Video82650203 -> FourHillsTournament1366973515[arrowhead=none, arrowtail=empty, dir=both];
+Video82650203 -> OlympicGames1709235160[arrowhead=none, arrowtail=empty, dir=both];
+Video82650203 -> PolishWorldCup1336648605[arrowhead=none, arrowtail=empty, dir=both];
+Video82650203 -> WorldChampionships2095026020[arrowhead=none, arrowtail=empty, dir=both];
+WorldChampionships2095026020 -> Payment877971942[label="videoList() -> buying()"];
+    
+}
+@enduml

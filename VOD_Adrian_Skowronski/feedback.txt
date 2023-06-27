@@ -1,0 +1,2 @@
+test00: Wszystko ok! 
+user: Aplikacja działa w porządku! 

@@ -1,0 +1,452 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "Main#menu()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1016194375 { 
+   	label=Login_Admin
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_551510268 { 
+   	label=Login_Admin
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Login_Admin1016194375XXXlogAdmin0[
+	label="+ logAdmin()"
+	style=filled
+	fillcolor=white
+	tooltip="Login_Admin
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1185989415 { 
+   	label=Registration
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_606901198 { 
+   	label=Registration
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Registration1185989415XXXregister0[
+	label="+ register()"
+	style=filled
+	fillcolor=white
+	tooltip="Registration
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_126857307 { 
+   	label=Feedback
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1066056654 { 
+   	label=Feedback
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Feedback126857307XXXleaveFeedback1808118735[
+	label="+ leaveFeedback()"
+	style=filled
+	fillcolor=white
+	tooltip="Feedback
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1336648605 { 
+   	label=PolishWorldCup
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1329083890 { 
+   	label=PolishWorldCup
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PolishWorldCup1336648605XXXvideoList1808118735[
+	label="+ videoList()"
+	style=filled
+	fillcolor=white
+	tooltip="PolishWorldCup
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1366973515 { 
+   	label=FourHillsTournament
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_736763908 { 
+   	label=FourHillsTournament
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FourHillsTournament1366973515XXXvideoList1808118735[
+	label="+ videoList()"
+	style=filled
+	fillcolor=white
+	tooltip="FourHillsTournament
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1709235160 { 
+   	label=OlympicGames
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_15543342 { 
+   	label=OlympicGames
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   OlympicGames1709235160XXXvideoList1808118735[
+	label="+ videoList()"
+	style=filled
+	fillcolor=white
+	tooltip="OlympicGames
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_202048534 { 
+   	label=UserMenu
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_601340270 { 
+   	label=UserMenu
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   UserMenu202048534XXXshowMenu1808118735[
+	label="+ showMenu()"
+	style=filled
+	fillcolor=white
+	tooltip="UserMenu
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2095026020 { 
+   	label=WorldChampionships
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_721013970 { 
+   	label=WorldChampionships
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   WorldChampionships2095026020XXXvideoList1808118735[
+	label="+ videoList()"
+	style=filled
+	fillcolor=white
+	tooltip="WorldChampionships
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1706522830 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main2390489XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	fontcolor=darkgreen
+];
+
+Main2390489XXXmenu0[
+	label="+ menu()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2645995 { 
+   	label=User
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1997638642 { 
+   	label=User
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   User2645995XXXaddFunds1799740042[
+	label="+ addFunds()"
+	style=filled
+	fillcolor=white
+	tooltip="User
+
+null"
+	fontcolor=darkgreen
+];
+
+User2645995XXXcheckUserId2013066710[
+	label="+ checkUserId()"
+	style=filled
+	fillcolor=white
+	tooltip="User
+
+null"
+	fontcolor=darkgreen
+];
+
+User2645995XXXinfo1808118735[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="User
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_609214285 { 
+   	label=AbroadWorldCup
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_112391182 { 
+   	label=AbroadWorldCup
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   AbroadWorldCup609214285XXXvideoList1808118735[
+	label="+ videoList()"
+	style=filled
+	fillcolor=white
+	tooltip="AbroadWorldCup
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_63116079 { 
+   	label=Admin
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_74429360 { 
+   	label=Admin
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Admin63116079XXXpanel0[
+	label="+ panel()"
+	style=filled
+	fillcolor=white
+	tooltip="Admin
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_73596745 { 
+   	label=Login
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1886425188 { 
+   	label=Login
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Login73596745XXXlogin0[
+	label="+ login()"
+	style=filled
+	fillcolor=white
+	tooltip="Login
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Admin63116079XXXpanel0 -> Main2390489XXXmenu0;
+Login73596745XXXlogin0 -> Login73596745XXXlogin0;
+Login73596745XXXlogin0 -> UserMenu202048534XXXshowMenu1808118735;
+Login_Admin1016194375XXXlogAdmin0 -> Main2390489XXXmenu0;
+Main2390489XXXmain1859653459 -> Main2390489XXXmenu0;
+Main2390489XXXmenu0 -> Login73596745XXXlogin0;
+Main2390489XXXmenu0 -> Login_Admin1016194375XXXlogAdmin0;
+Main2390489XXXmenu0 -> Registration1185989415XXXregister0;
+UserMenu202048534XXXshowMenu1808118735 -> AbroadWorldCup609214285XXXvideoList1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> Feedback126857307XXXleaveFeedback1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> FourHillsTournament1366973515XXXvideoList1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> Main2390489XXXmenu0;
+UserMenu202048534XXXshowMenu1808118735 -> OlympicGames1709235160XXXvideoList1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> PolishWorldCup1336648605XXXvideoList1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> User2645995XXXaddFunds1799740042;
+UserMenu202048534XXXshowMenu1808118735 -> User2645995XXXcheckUserId2013066710;
+UserMenu202048534XXXshowMenu1808118735 -> User2645995XXXinfo1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> UserMenu202048534XXXshowMenu1808118735;
+UserMenu202048534XXXshowMenu1808118735 -> WorldChampionships2095026020XXXvideoList1808118735;
+    
+}
+@enduml

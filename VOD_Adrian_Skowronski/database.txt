@@ -1,0 +1,7 @@
+test01,test01,test01@gmailc.om,123,0.0
+test00,test00,test00,123,0.0
+test02,test02,test02@op.pl,test02,172.0
+tes03,test03,test03@gmail.com,test03,0.0
+test04,test04,tes04@t.pl,21,0.0
+user,password,user@gmail.com,112233,36.0
+1,1111111,1@,1,0.0
